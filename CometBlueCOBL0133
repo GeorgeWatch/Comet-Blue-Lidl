@@ -1,0 +1,122 @@
+AT command Comet Blue Lidl Frimware COBL0133. Commands for any programming system
+Tool: Arduino USB TTL converter, HM-10 HMSoft CC2541 V701 firmware upgrade file.........[2019-01], Serial terminal (Realterm).
+
+[TX] - AT+CONNC48AD7117660
+[TX] - AT+MODE2
+[RX] - OK+Set:2
+[TX] - AT+TYPE?
+[RX] - OK+Get:2
+[TX] - AT+TYPE0
+[RX] - OK+Set:0
+[TX] - AT+UUID?
+[TX] - AT+CHAR?
+[TX] - AT+UUID?
+[RX] - OK+Get:0xFFE1
+[TX] - AT+UUID0xFFE0
+[RX] - OK+Set:0xFFE0
+[TX] - AT+CHAR?
+[RX] - OK+Get:0xFFE1
+[TX] - AT+RESET
+[RX] - OK+RESET
+[TX] - AT
+[RX] - OK
+[TX] - AT+DISC?
+[RX] - OK+DISCSOK+DIS0:C48AD7117660OK+RSSI:-066<CR><LF>
+OK+NAME:Comet Blue<CR><LF>
+OK+DISCE
+
+[TX] - AT+CONC48AD7117660
+[RX] - OK+CONNAOK+CONN<CR><LF>
+[TX] - AT+FINDSERVICES?
+[RX] - **********************************************************<CR><LF>
+/*
+P1: 4 Bytes, Services start handle
+P2: 4 Bytes, Services end handle
+P3: Service UUID
+
+*/ Return
+ P1 | P2 | P3 
+0001:0009:1800<CR><LF>
+000C:000F:1801<CR><LF>
+0010:0018:180A<CR><LF>
+0019:0048:47E9EE00-47E9-11E4-8939-164230D1DF67<CR><LF>
+********************************************************<CR><LF>
+
+[TX] - AT+FINDALLCHARS?
+[RX] - **********************************************************<CR><LF>
+
+/*
+P1: 4 Bytes, Characteristic handle.
+P2: 14 Bytes, “RD|WR|WN|NO|IN”,
+P3: Characteristic UUID
+
+/* Return
+P1  |       P2     | P3    
+0003:RD|--|--|--|--:2A00<CR><LF>
+0005:RD|--|--|--|--:2A01<CR><LF>
+0007:RD|WR|--|--|--:2A02<CR><LF>
+0009:RD|--|--|--|--:2A04<CR><LF>
+000E:RD|--|--|--|IN:2A05<CR><LF>
+0012:RD|--|--|--|--:2A29<CR><LF>
+0014:RD|--|--|--|--:2A24<CR><LF>
+0016:RD|--|--|--|--:2A26<CR><LF>
+0018:RD|--|--|--|--:2A28<CR><LF>
+001B:RD|WR|--|--|--:47E9EE01-47E9-11E4-8939-164230D1DF67<CR><LF>
+001D:RD|WR|--|--|--:47E9EE10-47E9-11E4-8939-164230D1DF67<CR><LF>
+001F:RD|WR|--|--|--:47E9EE11-47E9-11E4-8939-164230D1DF67<CR><LF>
+0021:RD|WR|--|--|--:47E9EE12-47E9-11E4-8939-164230D1DF67<CR><LF>
+0023:RD|WR|--|--|--:47E9EE13-47E9-11E4-8939-164230D1DF67<CR><LF>
+0025:RD|WR|--|--|--:47E9EE14-47E9-11E4-8939-164230D1DF67<CR><LF>
+0027:RD|WR|--|--|--:47E9EE15-47E9-11E4-8939-164230D1DF67<CR><LF>
+0029:RD|WR|--|--|--:47E9EE16-47E9-11E4-8939-164230D1DF67<CR><LF>
+002B:RD|WR|--|--|--:47E9EE20-47E9-11E4-8939-164230D1DF67<CR><LF>
+002D:RD|WR|--|--|--:47E9EE21-47E9-11E4-8939-164230D1DF67<CR><LF>
+002F:RD|WR|--|--|--:47E9EE22-47E9-11E4-8939-164230D1DF67<CR><LF>
+0031:RD|WR|--|--|--:47E9EE23-47E9-11E4-8939-164230D1DF67<CR><LF>
+0033:RD|WR|--|--|--:47E9EE24-47E9-11E4-8939-164230D1DF67<CR><LF>
+0035:RD|WR|--|--|--:47E9EE25-47E9-11E4-8939-164230D1DF67<CR><LF>
+0037:RD|WR|--|--|--:47E9EE26-47E9-11E4-8939-164230D1DF67<CR><LF>
+0039:RD|WR|--|--|--:47E9EE27-47E9-11E4-8939-164230D1DF67<CR><LF>
+003B:RD|WR|--|--|--:47E9EE2A-47E9-11E4-8939-164230D1DF67<CR><LF>
+003D:RD|WR|--|--|--:47E9EE2B-47E9-11E4-8939-164230D1DF67<CR><LF>
+003F:RD|WR|--|--|--:47E9EE2C-47E9-11E4-8939-164230D1DF67<CR><LF>
+0041:RD|WR|--|--|--:47E9EE2D-47E9-11E4-8939-164230D1DF67<CR><LF>
+0043:RD|WR|--|--|--:47E9EE2E-47E9-11E4-8939-164230D1DF67<CR><LF>
+0045:RD|WR|--|NO|--:47E9EE40-47E9-11E4-8939-164230D1DF67<CR><LF>
+0048:--|WR|--|--|--:47E9EE30-47E9-11E4-8939-164230D1DF67<CR><LF>
+********************************************************<CR><LF>
+
+PINs 
+
+[TX] - AT+SET_WAYWR0048
+[RX] - OK+SEND-OK<CR><LF>
+[TX] - <NUL><NUL><NUL><NUL> // login OK
+
+Read Firmware
+[TX] - AT+READDATA0041?
+[RX] - COBL0133
+[TX] - AT+READDATA0012?
+[RX] - Eurotronic GmbH
+[TX] - AT+READDATA0003?
+[RX] - Comet Blue
+[TX] - AT+READDATA0016?
+[RX] - 0.0.10
+
+Set Temp
+[TX] - AT+SET_WAYWR003D
+[RX] - OK+SEND-OK<CR><LF>
+[TX] - 80 80 24 2A 00 80 80 // 18.0, 21.0 C
+
+[TX] - 80 80 37 39 00 80 80 // open display ON
+[TX] - 80 80 14 0A 00 80 80 // close display OFF
+[TX] - 80 80 24 32 00 80 80 // 18.0, 25,0
+ 
+[TX] - AT+READDATA003D?
+[RX] - 80 80 24 32 00 80 80 // 18.0, 25,0
+
+Read Batt
+[TX] - AT+READDATA003F?
+[RX] - 0F // 15 %
+
+[TX] - AT+READDATA0043?
+[RX] - 1E 00 // UNKOWN ??
