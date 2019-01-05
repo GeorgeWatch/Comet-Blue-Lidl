@@ -1,15 +1,14 @@
 AT command Comet Blue Lidl Frimware COBL0133. Commands for any programming system
 Tool: Arduino USB TTL converter, HM-10 HMSoft CC2541 V701 firmware upgrade file.........[2019-01], Serial terminal (Realterm).
 
-[TX] - AT+CONNC48AD7117660
+[TX] - AT
+[RX] - OK
 [TX] - AT+MODE2
 [RX] - OK+Set:2
 [TX] - AT+TYPE?
 [RX] - OK+Get:2
 [TX] - AT+TYPE0
 [RX] - OK+Set:0
-[TX] - AT+UUID?
-[TX] - AT+CHAR?
 [TX] - AT+UUID?
 [RX] - OK+Get:0xFFE1
 [TX] - AT+UUID0xFFE0
@@ -25,7 +24,7 @@ Tool: Arduino USB TTL converter, HM-10 HMSoft CC2541 V701 firmware upgrade file.
 OK+NAME:Comet Blue<CR><LF>
 OK+DISCE
 
-[TX] - AT+CONC48AD7117660
+[TX] - AT+CONC48AD7117660 // your MAC address !!
 [RX] - OK+CONNAOK+CONN<CR><LF>
 [TX] - AT+FINDSERVICES?
 [RX] - **********************************************************<CR><LF>
