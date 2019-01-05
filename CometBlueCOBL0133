@@ -91,7 +91,7 @@ PINs
 
 [TX] - AT+SET_WAYWR0048
 [RX] - OK+SEND-OK<CR><LF>
-[TX] - <NUL><NUL><NUL><NUL> // login OK
+[TX] - 00 00 00 00 // login OK - Default PIN
 
 Read Firmware
 [TX] - AT+READDATA0041?
