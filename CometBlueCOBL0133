@@ -3,6 +3,8 @@ Tool: Arduino USB TTL converter, HM-10 HMSoft CC2541 V701 firmware upgrade file.
 
 [TX] - AT
 [RX] - OK
+[TX] - AT+MODE?
+[RX] - OK+Get:0
 [TX] - AT+MODE2
 [RX] - OK+Set:2
 [TX] - AT+TYPE?
